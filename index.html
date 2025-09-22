@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leo Sipowicz Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./public/css/styles.css">
+  <script src="./public/js/script.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container-box">
+        <div class="image-box">
+            <div class="top-row">
+                <img id="cup" src="./public/img/cups/whiteCup.png" alt="blueCup">
+                <img id="computer" src="./public/img/links/glyptoLink.png" alt="glyptodonLink">
+            </div>
+            <div class="bottom-row">
+                <img id="keys" src="./public/img/keys/keysAllUp.png" alt="keyboardAllUp">
+            </div>
+            
+            <div class="clickable-region region-cup" onclick="handleRegionClick('cup')"></div>
+            <div class="clickable-region region-computer" onclick="handleRegionClick('computer')"></div>
+            <div class="clickable-region region-keyboard-down" onclick="handleRegionClick('keyboard-down')"></div>
+            <div class="clickable-region region-keyboard-up" onclick="handleRegionClick('keyboard-up')"></div>
+            <div class="clickable-region region-keyboard-enter" onclick="handleRegionClick('keyboard-return')"></div>
+        </div>
+       <div class="text-box">
+            <div class="social-links">
+                <a href="https://github.com/leoSipowicz" target="_blank">
+                    <img class="social-icon" src="./public/img/icons/github-icon.svg" alt="github">
+                </a>
+                <a href="https://www.linkedin.com/in/leo-sipowicz-168254204" target="_blank">
+                    <img class="social-icon" src="./public/img/icons/linkedin-icon.svg" alt="linkedin">
+                </a>
+            </div>
+            <h3>Leo Sipowicz</h3>
+            <div class="speaker-icon">
+                <img id="mute-toggle" src="./public/img/icons/speaker-icon.svg" onclick="toggleMute()" alt="mute-toggle">
+            </div>
+        </div>
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-dialog">
+            <div class="popup-titlebar">
+                <span>Navigate to URL</span>
+                <div class="popup-close" onclick="closePopup()">×</div>
+            </div>
+            <div class="popup-content">
+                <div class="popup-icon"></div>
+                <div class="popup-message" id="popup-message">
+                    Do you want to navigate to<br><strong>www.glyptodonnews.com</strong>?
+                </div>
+            </div>
+            <div class="popup-buttons">
+                <button class="popup-button" onclick="closePopup()">No</button>
+                <button class="popup-button" onclick="confirmNavigation()">Yes</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
